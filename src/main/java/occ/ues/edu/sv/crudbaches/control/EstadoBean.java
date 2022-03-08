@@ -37,7 +37,7 @@ public class EstadoBean implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Estado estado) {
+    public boolean create(Estado estado) {
         if (estado.getObjetoEstadoList() == null) {
             estado.setObjetoEstadoList(new ArrayList<ObjetoEstado>());
         }
@@ -65,8 +65,10 @@ public class EstadoBean implements Serializable {
         } finally {
             if (em != null) {
                 em.close();
+                return true;
             }
         }
+        return false;
     }
 
     public void edit(Estado estado) throws NonexistentEntityException, Exception {
