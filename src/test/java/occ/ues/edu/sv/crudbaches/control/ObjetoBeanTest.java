@@ -23,29 +23,31 @@ public class ObjetoBeanTest {
     public ObjetoBeanTest() {
     }
 
-//    @Test
-//    public void testCreate() {
-//        System.out.println("create");
-//        Objeto objeto = new Objeto();
-//        objeto.setNombre("Creando prueba" + System.currentTimeMillis());
-//        ObjetoBean instance = new ObjetoBean();
-//
-//        boolean expResult = true;
-//        boolean result = instance.create(objeto);
-//        assertEquals(expResult, result);
-//    }
-//    @Test
-//    public void testEdit() throws Exception {
-//        System.out.println("edit");
-//        Objeto objeto;
-//        ObjetoBean instance = new ObjetoBean();
-//        long id = 2;
-//        objeto = instance.findObjeto(id);
-//
-//        objeto.setNombre("editado prueba" + System.currentTimeMillis());
-//        instance.edit(objeto);
-//
-//    }
+    @Test
+    public void testCreate() {
+        System.out.println("create");
+        Objeto objeto = new Objeto();
+        objeto.setNombre("Creando prueba" + System.currentTimeMillis());
+        ObjetoBean instance = new ObjetoBean();
+
+        boolean expResult = true;
+        boolean result = instance.create(objeto);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testEdit() throws Exception {
+        System.out.println("edit");
+        Objeto objeto;
+        ObjetoBean instance = new ObjetoBean();
+        long id = 2;
+        objeto = instance.findObjeto(id);
+
+        objeto.setNombre("editado prueba" + System.currentTimeMillis());
+        instance.edit(objeto);
+
+    }
+    
 //    @Test
 //    public void testDestroy() throws Exception {
 //        System.out.println("destroy");
@@ -55,14 +57,14 @@ public class ObjetoBeanTest {
 //
 //    }
     
-//    @Test
-//    public void testFindObjeto() {
-//        System.out.println("findEstado");
-//        long id = 2;
-//        ObjetoBean instance = new ObjetoBean();
-//        Objeto expResult = new Objeto();
-//        Objeto result = instance.findObjeto(id);
-//        assertEquals(result.getClass(), Objeto.class);
-//        System.out.println(result.getNombre());
-//    }
+    @Test
+    public void testFindObjeto() {
+        System.out.println("findEstado");
+        long id = 2;
+        ObjetoBean instance = new ObjetoBean();
+        Objeto expResult = new Objeto();
+        Objeto result = instance.findObjeto(id);
+        assertEquals(result.getClass(), Objeto.class);
+        System.out.println(result.getNombre());
+    }
 }

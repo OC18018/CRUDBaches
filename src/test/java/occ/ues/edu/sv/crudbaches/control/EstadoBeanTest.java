@@ -23,28 +23,28 @@ public class EstadoBeanTest {
 
     public EstadoBeanTest() {
     }
-//    @Test
-//    public void testCreate() {
-//        System.out.println("create");
-//        Estado nuevo = new Estado();
-//        nuevo.setFechaCreacion(new Date());
-//        nuevo.setNombre("Creando prueba" + System.currentTimeMillis());
-//        EstadoBean instance = new EstadoBean();
-//        boolean expResult = true;
-//        boolean result = instance.create(nuevo);
-//        assertEquals(expResult, result);
-//    }
+    @Test
+    public void testCreate() {
+        System.out.println("create");
+        Estado nuevo = new Estado();
+        nuevo.setFechaCreacion(new Date());
+        nuevo.setNombre("Creando prueba" + System.currentTimeMillis());
+        EstadoBean instance = new EstadoBean();
+        boolean expResult = true;
+        boolean result = instance.create(nuevo);
+        assertEquals(expResult, result);
+    }
 
-//    @Test
-//    public void testEdit() throws Exception {
-//        System.out.println("edit");
-//        Estado estado;
-//        EstadoBean instance = new EstadoBean();
-//        estado = instance.findEstado(1);
-//        estado.setNombre("probando");
-//        instance.edit(estado);
-//        
-//    }
+    @Test
+    public void testEdit() throws Exception {
+        System.out.println("edit");
+        Estado estado;
+        EstadoBean instance = new EstadoBean();
+        estado = instance.findEstado(1);
+        estado.setNombre("probando");
+        instance.edit(estado);
+        
+    }
     
     
 //    @Test
@@ -55,14 +55,14 @@ public class EstadoBeanTest {
 //        instance.destroy(id);
 //    }
     
-//    @Test
-//    public void testFindEstado() {
-//        System.out.println("findEstado");
-//        Integer id = 2;
-//        EstadoBean instance = new EstadoBean();
-//        Estado expResult = new Estado();
-//        Estado result = instance.findEstado(id);
-//        assertEquals(result.getClass(), Estado.class);
-//        System.out.println(result.getNombre());
-//    }
+    @Test
+    public void testFindEstado() {
+        System.out.println("findEstado");
+        Integer id = 2;
+        EstadoBean instance = new EstadoBean();
+        Estado expResult = new Estado();
+        Estado result = instance.findEstado(id);
+        assertEquals(result.getClass(), Estado.class);
+        System.out.println(result.getNombre());
+    }
 }
